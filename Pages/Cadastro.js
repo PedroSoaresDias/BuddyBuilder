@@ -1,4 +1,3 @@
-import { StatusBar, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView, StyleSheet, View, TextInput, Image, TouchableOpacity } from "react-native";
 

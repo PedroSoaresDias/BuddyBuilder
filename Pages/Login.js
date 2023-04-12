@@ -1,6 +1,6 @@
 import { StatusBar } from "react-native";
 import React, { useState } from "react";
-import { StyleSheet,  View, TextInput, Text, TouchableOpacity} from "react-native";
+import { StyleSheet, View, TextInput, Text, TouchableOpacity } from "react-native";
 
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
