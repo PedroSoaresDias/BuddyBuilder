@@ -1,31 +1,35 @@
 import React, { useState } from "react";
 import { SafeAreaView, StyleSheet, View, TextInput, Image, TouchableOpacity } from "react-native";
 
-const SignUpScreen = () => {
-    const [nickname, setNickname] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [confirmPassword, setConfirmPassword] = useState('');
+// const SignUpScreen = () => {
+//     const [nickname, setNickname] = useState('');
+//     const [email, setEmail] = useState('');
+//     const [password, setPassword] = useState('');
+//     const [confirmPassword, setConfirmPassword] = useState('');
 
-    const handleSignUp = () => {
-        // implementar lógica de validação do lado do cliente e armazenamento de dados
-    };
-}
+//     const handleSignUp = () => {
+//         // implementar lógica de validação do lado do cliente e armazenamento de dados
+//     };
+// }
 
 export default function Cadastro() {
     return (
         <View style={styles.container}>
             <Text style={styles.textNickname}>Apelido</Text>
-            <TextInput style={styles.nicknameInput} placeholder="Apelido" onChangeText={text => setNickname(text)} value={nickname} />
+            {/* <TextInput style={styles.nicknameInput} placeholder="Apelido" onChangeText={text => setNickname(text)} value={nickname} /> */}
+            <TextInput style={styles.nicknameInput} placeholder="Apelido"/>
 
             <Text style={styles.textEmail}>E-mail</Text>
-            <TextInput style={styles.emailInput} placeholder="E-mail" onChangeText={text => setEmail(text)} value={email} />
+            {/* <TextInput style={styles.emailInput} placeholder="E-mail" onChangeText={text => setEmail(text)} value={email} /> */}
+            <TextInput style={styles.emailInput} placeholder="E-mail"/>
 
             <Text style={styles.textPassword}>Senha</Text>
-            <TextInput placeholder="Senha" onChangeText={text => setPassword(text)} value={password} />
+            {/* <TextInput placeholder="Senha" onChangeText={text => setPassword(text)} value={password} /> */}
+            <TextInput style={styles.passwordInput} placeholder="Senha"/>
 
             <Text style={styles.textConfirm}>Confirmar senha</Text>
-            <TextInput style={styles.confirmPasswordInput} placeholder="Confirmar senha" onChangeText={text => setConfirmPassWord(text)} value={confirmPassword} />
+            {/* <TextInput style={styles.confirmPasswordInput} placeholder="Confirmar senha" onChangeText={text => setConfirmPassWord(text)} value={confirmPassword} /> */}
+            <TextInput style={styles.confirmPasswordInput} placeholder="Confirmar senha"/>
 
             <TouchableOpacity style={styles.btnCadastro}><Text style={styles.textCadastro}>Concluir cadastro</Text></TouchableOpacity>
         </View>
