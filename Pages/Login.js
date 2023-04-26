@@ -23,7 +23,7 @@ export default function Login() {
     // <View style={styles.container}>
 
     // </View>
-    <View>
+    <View style={styles.container}>
       {/* <TextInput style={styles.inputEmail} placeholder="E-mail" onChangeText={(text) => setEmail(text)} value={email} /> */}
       <TextInput style={styles.inputEmail} placeholder="E-mail" />
       {/* <TextInput style={styles.inputPassword} placeholder="Senha" onChangeText={(text) => setPassword(text)} value={password} /> */}
