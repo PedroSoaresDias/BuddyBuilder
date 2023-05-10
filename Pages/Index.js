@@ -13,7 +13,7 @@ const MyStack = () => {
           component={Login}
           options={{title: 'Welcome'}}
         />
-        <Stack.Screen name='Profile' component={Cadastro}/>
+        <Stack.Screen name='Cadastro' component={Cadastro}/>
       </Stack.Navigator>
     </NavigationContainer>
   )

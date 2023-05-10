@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { SafeAreaView, StyleSheet, View, TextInput, Image, TouchableOpacity } from "react-native";
+import { Button } from "react-native-web";
 
 // const SignUpScreen = () => {
 //     const [nickname, setNickname] = useState('');
@@ -12,7 +13,7 @@ import { SafeAreaView, StyleSheet, View, TextInput, Image, TouchableOpacity } fr
 //     };
 // }
 
-export default function Cadastro() {
+const Cadastro = ({navigation}) => {
     return (
         <View style={styles.container}>
             <Text style={styles.textNickname}>Apelido</Text>
@@ -32,9 +33,14 @@ export default function Cadastro() {
             <TextInput style={styles.confirmPasswordInput} placeholder="Confirmar senha"/>
 
             <TouchableOpacity style={styles.btnCadastro}><Text style={styles.textCadastro}>Concluir cadastro</Text></TouchableOpacity>
+
+            <Button
+                title="Login" onPress={() => navigation.navigate('Login')} />
         </View>
     )
 }
+
+export default Cadastro;
 
 const styles = StyleSheet.create({
     container: {

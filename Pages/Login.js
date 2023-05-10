@@ -6,8 +6,9 @@ import {
   TextInput,
   Text,
   TouchableOpacity,
+  Button,
 } from "react-native";
-import { Button } from "react-native";
+import Cadastro from "./Cadastro";
 
 // const LoginScreen = () => {
 // //   const [email, setEmail] = useState("");
@@ -18,7 +19,8 @@ import { Button } from "react-native";
 //   };
 // };
 
-export default function Login() {
+
+const Login = ({navigation}) => {
   return (
     // <View style={styles.container}>
 
@@ -33,12 +35,16 @@ export default function Login() {
         <Text>Login</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.btnCadastro}>
+      <TouchableOpacity style={styles.btnCadastro} onPress={() => navigation.navigate('Cadastrar')}>
         <Text>Cadastrar-se</Text>
+        {/* <Button style={styles.btnCadastro} title="Cadastrar"
+        onPress={() => this.props.navigation.navigate('Cadastrar')}/> */}
       </TouchableOpacity>
     </View>
   );
 }
+
+export default Login;
 
 const styles = StyleSheet.create({
   container: {
