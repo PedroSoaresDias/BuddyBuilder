@@ -1,12 +1,10 @@
-import { StatusBar } from "react-native";
-import React, { useState } from "react";
+import React from "react";
 import {
   StyleSheet,
   View,
   TextInput,
   Text,
   TouchableOpacity,
-  Button,
 } from "react-native";
 import Cadastro from "./Cadastro";
 
@@ -30,15 +28,13 @@ const Login = ({navigation}) => {
       <TextInput style={styles.inputEmail} placeholder="E-mail" />
       {/* <TextInput style={styles.inputPassword} placeholder="Senha" onChangeText={(text) => setPassword(text)} value={password} /> */}
       <TextInput style={styles.inputPassword} placeholder="Senha" />
-
+      
       <TouchableOpacity style={styles.btnLogin}>
         <Text>Login</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.btnCadastro} onPress={() => navigation.navigate('Cadastrar')}>
         <Text>Cadastrar-se</Text>
-        {/* <Button style={styles.btnCadastro} title="Cadastrar"
-        onPress={() => this.props.navigation.navigate('Cadastrar')}/> */}
       </TouchableOpacity>
     </View>
   );

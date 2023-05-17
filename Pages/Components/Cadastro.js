@@ -34,8 +34,10 @@ const Cadastro = ({navigation}) => {
 
             <TouchableOpacity style={styles.btnCadastro}><Text style={styles.textCadastro}>Concluir cadastro</Text></TouchableOpacity>
 
-            <Button
-                title="Login" onPress={() => navigation.navigate('Login')} />
+            <TouchableOpacity
+                title="Login" onPress={() => navigation.navigate('Login')} >
+                <Text>Fazer Login</Text>
+            </TouchableOpacity>
         </View>
     )
 }
