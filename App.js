@@ -1,62 +1,61 @@
 import * as React from "react";
-import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Login from "./Pages/Components/Login";
-import Cadastro from "./Pages/Components/Cadastro";
+// import Login from "./Pages/Components/Login";
+// import Cadastro from "./Pages/Components/Cadastro";
 
-// function Login({ navigation }) {
-//   return (
-//     <View style={styles.container}>
-//       {/* <TextInput style={styles.inputEmail} placeholder="E-mail" onChangeText={(text) => setEmail(text)} value={email} /> */}
-//       <TextInput style={styles.inputEmail} placeholder="E-mail" />
-//       {/* <TextInput style={styles.inputPassword} placeholder="Senha" onChangeText={(text) => setPassword(text)} value={password} /> */}
-//       <TextInput style={styles.inputPassword} placeholder="Senha" />
+function Login({ navigation }) {
+  return (
+    <View style={styles.container}>
+      {/* <TextInput style={styles.inputEmail} placeholder="E-mail" onChangeText={(text) => setEmail(text)} value={email} /> */}
+      <TextInput style={styles.inputEmail} placeholder="E-mail" />
+      {/* <TextInput style={styles.inputPassword} placeholder="Senha" onChangeText={(text) => setPassword(text)} value={password} /> */}
+      <TextInput style={styles.inputPassword} placeholder="Senha" />
 
-//       <TouchableOpacity style={styles.btnLogin}>
-//         <Text>Login</Text>
-//       </TouchableOpacity>
+      <TouchableOpacity style={styles.btnLogin}>
+        <Text>Login</Text>
+      </TouchableOpacity>
 
-//       <TouchableOpacity
-//         style={styles.btnCadastro}
-//         onPress={() => navigation.navigate("Cadastrar")}
-//       >
-//         <Text>Cadastrar-se</Text>
-//         {/* <Button style={styles.btnCadastro} title="Cadastrar"
-//         onPress={() => this.props.navigation.navigate('Cadastrar')}/> */}
-//       </TouchableOpacity>
-//     </View>
-//   );
-// }
+      <TouchableOpacity
+        style={styles.btnCadastro}
+        onPress={() => navigation.navigate("Cadastrar")}
+      >
+        <Text>Cadastrar-se</Text>
+        {/* <Button style={styles.btnCadastro} title="Cadastrar"
+        onPress={() => this.props.navigation.navigate('Cadastrar')}/> */}
+      </TouchableOpacity>
+    </View>
+  );
+}
 
-// function Cadastro(navigation) {
-//   return (
-//     <View style={styles.container}>
-//       <Text style={styles.textNickname}>Apelido</Text>
-//       {/* <TextInput style={styles.nicknameInput} placeholder="Apelido" onChangeText={text => setNickname(text)} value={nickname} /> */}
-//       <TextInput style={styles.nicknameInput} placeholder="Apelido" />
+function Cadastro(navigation) {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.textNickname}>Apelido</Text>
+      {/* <TextInput style={styles.nicknameInput} placeholder="Apelido" onChangeText={text => setNickname(text)} value={nickname} /> */}
+      <TextInput style={styles.nicknameInput} placeholder="Apelido" />
 
-//       <Text style={styles.textEmail}>E-mail</Text>
-//       {/* <TextInput style={styles.emailInput} placeholder="E-mail" onChangeText={text => setEmail(text)} value={email} /> */}
-//       <TextInput style={styles.emailInput} placeholder="E-mail" />
+      <Text style={styles.textEmail}>E-mail</Text>
+      {/* <TextInput style={styles.emailInput} placeholder="E-mail" onChangeText={text => setEmail(text)} value={email} /> */}
+      <TextInput style={styles.emailInput} placeholder="E-mail" />
 
-//       <Text style={styles.textPassword}>Senha</Text>
-//       {/* <TextInput placeholder="Senha" onChangeText={text => setPassword(text)} value={password} /> */}
-//       <TextInput style={styles.passwordInput} placeholder="Senha" />
+      <Text style={styles.textPassword}>Senha</Text>
+      {/* <TextInput placeholder="Senha" onChangeText={text => setPassword(text)} value={password} /> */}
+      <TextInput style={styles.passwordInput} placeholder="Senha" />
 
-//       <Text style={styles.textConfirm}>Confirmar senha</Text>
-//       {/* <TextInput style={styles.confirmPasswordInput} placeholder="Confirmar senha" onChangeText={text => setConfirmPassWord(text)} value={confirmPassword} /> */}
-//       <TextInput
-//         style={styles.confirmPasswordInput}
-//         placeholder="Confirmar senha"
-//       />
+      <Text style={styles.textConfirm}>Confirmar senha</Text>
+      {/* <TextInput style={styles.confirmPasswordInput} placeholder="Confirmar senha" onChangeText={text => setConfirmPassWord(text)} value={confirmPassword} /> */}
+      <TextInput
+        style={styles.confirmPasswordInput}
+        placeholder="Confirmar senha"
+      />
 
-//       <TouchableOpacity style={styles.btnCadastro} onPress={() => navigation.navigate('Login')}>
-//         <Text style={styles.textCadastro}>Concluir cadastro</Text>
-//       </TouchableOpacity>
-//     </View>
-//   );
-// }
+      <TouchableOpacity style={styles.btnCadastro} onPress={() => navigation.navigate('Login')}>
+        <Text style={styles.textCadastro}>Concluir cadastro</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
 
 // function IMC() {
 //   const [peso, setPeso] = useState('');
@@ -105,15 +104,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
-        <Stack.Screen name="Login" component={Login}>
-          {(props) => <Login {...props} extraData={someData} />}
-        </Stack.Screen>
+        <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Cadastrar" component={Cadastro} />
-          {(props) => <Cadastro {...props} extraData={someData} />}
-        <Stack.Screen />
-        {/* <Stack.Screen name="IMC" component={IMC} />
-        {(props) => <IMC {...props} extraData={someData} />}
-        <Stack.Screen /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
