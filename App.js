@@ -1,8 +1,8 @@
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Login from "./Pages/Components/Login";
-import Cadastro from "./Pages/Components/Cadastro";
+// import Login from "./Pages/Components/Login";
+// import Cadastro from "./Pages/Components/Cadastro";
 
 function Login({ navigation }) {
   return (
